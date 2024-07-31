@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=roboto&display=swap');
+
+* {
+font-family: "roboto",sans-serif;
+margin: 0;
+padding: 0;
+outline: none;
+border: none;
+}
+
+body {
+    background: linear-gradient(135deg, #153677,#4e085f);;
+}
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.container .heading {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: aqua;
+}
+.container .accordionwrapper {
+    padding: 0 20px;
+}
+
+.container .accordion { 
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.container .accordion.active .accordionheading {
+    background: #555;
+    color: #fff;
+
+}
+.container .accordion.active .accordionheading i {
+    color:#fff;
+    transform: rotate(180deg);
+    transition: transform 0.2s 0.1s;
+}
+.container .accordion.active .accordioncontent {
+   display: block; 
+}
+
+.container .accordionheading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: #fff;
+    border: 2px solid #333;
+    padding: 20px 20px;
+
+}
+
+.container .accordionheading h1 {
+    font-size: 20px;
+}
+.container .accordioncontent {
+    padding: 15px 20px;
+    border: 2px solid #333;
+    font-size: 15px;
+    background: #fff;
+    border-top: 0;
+    display: none;
+    animation:animate 0.2s linear backwards;
+    line-height: 2;
+    transform-origin: top;
+
+}
+@keyframes animate {
+    0%{
+        transform:scaleY(0);
+    }
+    
+}
+
